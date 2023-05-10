@@ -16,9 +16,7 @@ const shopSection: HTMLElement = document.querySelector(".section_clicker_shop")
 const gameSection: HTMLElement = document.querySelector(".section_clicker_game");
 
 if (localStorage.getItem("AoventWebClicker") == null) {
-    const startBalance: number = 1000;
-
-    balanceField.innerHTML = `Money: ${startBalance}`
+    balanceField.innerHTML = "Money: 1000"
 }
 
 clickerShopButton.addEventListener("click", () => {
@@ -34,7 +32,6 @@ clickerGameButton.addEventListener("click", () => {
 closeGameButton.addEventListener("click", () => {
     gameSection.style.cssText = "display: none;"
 })
-
 
 console.log(getNowBalance(gemsField));
 coinGame();
