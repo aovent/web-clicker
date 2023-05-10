@@ -73,19 +73,94 @@ main h1 {
     border-radius: var(--br);
 }
 
-.clicker_shop {
+.clicker_shop, .clicker_games {
     display: flex;
     justify-content: center;
+
+    cursor: pointer;
 }
 
-.clicker_shop a {
+.clicker_shop a, .section_clicker_shop button, .section_clicker_game button {
     text-decoration: none;
     color: var(--text-first);
 }
 
-.clicker_shop a:hover {
+.clicker_shop a:hover,.clicker_games a:hover , .section_clicker_shop button:hover, .section_clicker_game button:hover {
     text-decoration: underline;
     color: var(--hover-color1);
 
     transition: 0.3s;
+}
+
+.section_clicker_shop, .section_clicker_game {
+    position: absolute;
+
+    left: 0; top: 0;
+
+    background: var(--menus);
+
+    height: 100%;
+    width: 100%;
+
+    display: none;
+
+    padding: 0 1vw;
+}
+
+.button_section {
+    display: flex;
+    justify-content: center;
+}
+
+.section_clicker_shop button, .section_clicker_game button {
+    border: 0;
+    border-radius: var(--br);
+
+    margin-top: 1vh;
+
+    background: var(--submenus);
+
+    padding: 0.5vh;
+}
+
+.cells_section {
+    margin-top: 2vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.cells_string {
+    display: flex;
+    justify-content: space-around;
+
+    margin-bottom: 4vh;
+}
+
+.cell {
+    background: var(--submenus);
+
+    width: 20vh;
+    height: 20vh;
+
+    border-radius: var(--br);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.cell img {
+    width: 20vh;
+}
+
+.cell_text {
+    position: absolute;
+
+    color: black;
+
+    text-transform: uppercase;
 }
