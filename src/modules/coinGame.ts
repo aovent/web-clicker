@@ -14,11 +14,13 @@ export function coinGame(): void {
             level: number;
             rebirths: number;
         } = {
-            balance: JSON.parse(localStorage.getItem("AoventWebClicker")).balance += 1,
-            gems: 0,
-            level: 1,
-            rebirths: 0
+            balance: JSON.parse(localStorage.getItem("AoventWebClicker")).balance += (1 * JSON.parse(localStorage.getItem("AoventWebClicker")).level),
+            gems: JSON.parse(localStorage.getItem("AoventWebClicker")).gems,
+            level: JSON.parse(localStorage.getItem("AoventWebClicker")).level,
+            rebirths: JSON.parse(localStorage.getItem("AoventWebClicker")).rebirths
         }
+
+        console.log(JSON.parse(localStorage.getItem("AoventWebClicker")).level)
 
         localStorage.setItem("AoventWebClicker", JSON.stringify(stats));
         drawMoney();
