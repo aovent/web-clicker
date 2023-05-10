@@ -1,3 +1,3 @@
-export function getNowBalance(gemsField): number {
-    return Number(String((gemsField.innerHTML)).split(": ")[1]);
+export function getNowBalance(): number {
+    return JSON.parse(localStorage.getItem("AoventWebClicker")).balance
 }

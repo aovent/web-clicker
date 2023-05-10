@@ -1,4 +1,4 @@
-export function getNowBalance(gemsField) {
-    return Number(String((gemsField.innerHTML)).split(": ")[1]);
+export function getNowBalance() {
+    return JSON.parse(localStorage.getItem("AoventWebClicker")).balance;
 }
 //# sourceMappingURL=getNowBalance.js.map

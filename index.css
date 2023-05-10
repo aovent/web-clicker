@@ -175,7 +175,7 @@ main h1 {
     padding: 0 1vh;
 
     height: 100%; width: 100%;
-    /* display: none; */
+    display: none;
 }
 
 .coin_coin {
@@ -207,4 +207,5 @@ main h1 {
 
 .coin_coin:active {
     scale: 1.4;
+    transition: 0.2s;
 }
