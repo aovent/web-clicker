@@ -1,6 +1,6 @@
 import { coinGame } from "./modules/coinGame.js";
 import { getNowBalance } from "./modules/getNowBalance.js";
-import { drawMoney, drawCC } from "./modules/drawStats.js";
+import { drawMoney, drawCC, drawCCspeed } from "./modules/drawStats.js";
 import { coinClickUpgrade } from "./modules/upgrades.js";
 
 const gemsField: HTMLElement = document.querySelector(".stats_ultramoney");
@@ -70,6 +70,7 @@ closeGameButton.addEventListener("click", () => {
 
 coinGameButton.addEventListener("click", () => {
     coinGameSection.style.cssText = "display: block;"
+    drawCCspeed();
     coinGame();
 })
 closecoinGameButton.addEventListener("click", () => {

@@ -9,4 +9,7 @@ export function drawMoney(drawField = null) {
 export function drawCC() {
     document.querySelector(".stats_coinclickstat").innerHTML = `Coin Click: ${JSON.parse(localStorage.getItem("AoventWebClickerUpgrades")).coinclick}`;
 }
+export function drawCCspeed() {
+    document.querySelector(".cb_speed").innerHTML = `Speed: ${JSON.parse(localStorage.getItem("AoventWebClickerUpgrades")).coinclick * 10}`;
+}
 //# sourceMappingURL=drawStats.js.map
