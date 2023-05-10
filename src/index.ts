@@ -1,6 +1,7 @@
 import { coinGame } from "./modules/coinGame.js";
 import { getNowBalance } from "./modules/getNowBalance.js";
 import { drawMoney } from "./modules/drawStats.js";
+import { coinClickUpgrade } from "./modules/upgrades.js";
 
 const gemsField: HTMLElement = document.querySelector(".stats_ultramoney");
 const balanceField: HTMLElement = document.querySelector(".stats_money");
@@ -70,4 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
     drawMoney(document.querySelector(".cb_text"));
 })
 
-console.log(getNowBalance());
+document.getElementById("coinclick_upgrade").addEventListener("click", () => {
+    coinClickUpgrade();
+})
