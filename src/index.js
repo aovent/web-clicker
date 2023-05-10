@@ -11,8 +11,7 @@ const closeGameButton = document.querySelector(".scg_button");
 const shopSection = document.querySelector(".section_clicker_shop");
 const gameSection = document.querySelector(".section_clicker_game");
 if (localStorage.getItem("AoventWebClicker") == null) {
-    const startBalance = 1000;
-    balanceField.innerHTML = `Money: ${startBalance}`;
+    balanceField.innerHTML = "Money: 1000";
 }
 clickerShopButton.addEventListener("click", () => {
     shopSection.style.cssText = "display: block;";
@@ -26,6 +25,6 @@ clickerGameButton.addEventListener("click", () => {
 closeGameButton.addEventListener("click", () => {
     gameSection.style.cssText = "display: none;";
 });
-console.log(getNowBalance(gemsField));
+console.log(getNowBalance(balanceField));
 coinGame();
 //# sourceMappingURL=index.js.map

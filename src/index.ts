@@ -33,7 +33,7 @@ closeGameButton.addEventListener("click", () => {
     gameSection.style.cssText = "display: none;"
 })
 
-console.log(getNowBalance(gemsField));
+console.log(getNowBalance(balanceField));
 coinGame();
 
 // "tsc" to compile

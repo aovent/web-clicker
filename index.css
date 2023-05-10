@@ -85,7 +85,7 @@ main h1 {
     color: var(--text-first);
 }
 
-.clicker_shop a:hover,.clicker_games a:hover , .section_clicker_shop button:hover, .section_clicker_game button:hover {
+.clicker_shop a:hover,.clicker_games a:hover , .section_clicker_shop button:hover, .section_clicker_game button:hover, .close_button_coin button:hover {
     text-decoration: underline;
     color: var(--hover-color1);
 
@@ -112,7 +112,7 @@ main h1 {
     justify-content: center;
 }
 
-.section_clicker_shop button, .section_clicker_game button {
+.section_clicker_shop button, .section_clicker_game button, .close_button_coin button {
     border: 0;
     border-radius: var(--br);
 
@@ -163,4 +163,48 @@ main h1 {
     color: black;
 
     text-transform: uppercase;
+}
+
+.coin_game {
+    position: absolute;
+
+    background: var(--menus);
+    top: 0;
+    left: 0;
+
+    padding: 0 1vh;
+
+    height: 100%; width: 100%;
+    /* display: none; */
+}
+
+.coin_coin {
+    display: flex;
+    justify-content: center;
+}
+
+.coin_coin img {
+    width: 40%;
+    max-height: 20%;
+
+    user-select: none;
+}
+
+.coin_balance {
+    color: var(--text-first);
+}
+
+.close_button_coin {
+    margin-top: 2vh;
+
+    display: flex;
+    justify-content: center;
+}
+
+.close_button_coin button {
+    color: var(--text-first);
+}
+
+.coin_coin:active {
+    scale: 1.4;
 }
