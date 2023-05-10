@@ -8,9 +8,7 @@ if (localStorage.getItem("AoventWebClicker") == null) {
 }
 
 function getNowBalance(): number {
-    let nowBalance: number = Number(String((gemsField.innerHTML)).split(": ")[1]);
-
-    return nowBalance;
+    return Number(String((gemsField.innerHTML)).split(": ")[1]);
 }
 
 console.log(getNowBalance());
