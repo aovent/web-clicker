@@ -209,3 +209,51 @@ main h1 {
     scale: 1.4;
     transition: 0.2s;
 }
+
+.shop_sections {
+    margin-top: 2vh;
+}
+
+.shop_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--text-first);
+
+    margin-bottom: 2vh;
+}
+
+.shop_section h3 {
+    margin-bottom: 1vh;
+}
+
+.items_section {
+    background: var(--submenus);
+
+    border-radius: var(--br);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.shop_item {
+    cursor: pointer;
+
+    padding: 1vh;
+
+    margin: 0 1vh;
+
+    min-width: 50vw;
+    min-height: 5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop_item:hover {
+    color: var(--hover-color1);
+
+    transition: 0.2s;
+}
