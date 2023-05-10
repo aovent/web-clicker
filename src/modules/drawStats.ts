@@ -5,3 +5,7 @@ export function drawMoney(drawField = null): void {
         drawField.innerHTML = `Money: ${JSON.parse(localStorage.getItem("AoventWebClicker")).balance}`;
     }
 }
+
+export function drawCC(): void {
+    document.querySelector(".stats_coinclickstat").innerHTML = `Coin Click: ${JSON.parse(localStorage.getItem("AoventWebClickerUpgrades")).coinclick}`;
+}

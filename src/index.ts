@@ -1,6 +1,6 @@
 import { coinGame } from "./modules/coinGame.js";
 import { getNowBalance } from "./modules/getNowBalance.js";
-import { drawMoney } from "./modules/drawStats.js";
+import { drawMoney, drawCC } from "./modules/drawStats.js";
 import { coinClickUpgrade } from "./modules/upgrades.js";
 
 const gemsField: HTMLElement = document.querySelector(".stats_ultramoney");
@@ -37,12 +37,21 @@ if (localStorage.getItem("AoventWebClicker") == null) {
         rebirths: 0
     }
 
+    let upgrades: {
+        coinclick: number;
+    } = {
+        coinclick: 0
+    }
+
     localStorage.setItem("AoventWebClicker", JSON.stringify(stats));
+    localStorage.setItem("AoventWebClickerUpgrades", JSON.stringify(upgrades));
 } else {
     balanceField.innerHTML = `Money: ${JSON.parse(localStorage.getItem("AoventWebClicker")).balance}`
     gemsField.innerHTML = `Gems: ${JSON.parse(localStorage.getItem("AoventWebClicker")).gems}`
     levelField.innerHTML = `Level: ${JSON.parse(localStorage.getItem("AoventWebClicker")).level}`
     rebirthsField.innerHTML = `Rebirths: ${JSON.parse(localStorage.getItem("AoventWebClicker")).rebirths}`
+
+    drawCC();
 }
 
 clickerShopButton.addEventListener("click", () => {
