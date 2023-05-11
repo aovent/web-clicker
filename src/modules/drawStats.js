@@ -12,4 +12,7 @@ export function drawCC() {
 export function drawCCspeed() {
     document.querySelector(".cb_speed").innerHTML = `Speed: ${JSON.parse(localStorage.getItem("AoventWebClickerUpgrades")).coinclick * 10}`;
 }
+export function drawLevel() {
+    document.querySelector(".stats_level").innerHTML = `Level: ${JSON.parse(localStorage.getItem("AoventWebClicker")).level}`;
+}
 //# sourceMappingURL=drawStats.js.map

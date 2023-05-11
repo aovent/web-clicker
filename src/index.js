@@ -1,6 +1,6 @@
 import { coinGame } from "./modules/coinGame.js";
-import { drawMoney, drawCC, drawCCspeed } from "./modules/drawStats.js";
-import { coinClickUpgrade } from "./modules/upgrades.js";
+import { drawMoney, drawCC, drawCCspeed, drawLevel } from "./modules/drawStats.js";
+import { coinClickUpgrade, levelUp } from "./modules/upgrades.js";
 const gemsField = document.querySelector(".stats_ultramoney");
 const balanceField = document.querySelector(".stats_money");
 const levelField = document.querySelector(".stats_level");
@@ -34,6 +34,7 @@ else {
     levelField.innerHTML = `Level: ${JSON.parse(localStorage.getItem("AoventWebClicker")).level}`;
     rebirthsField.innerHTML = `Rebirths: ${JSON.parse(localStorage.getItem("AoventWebClicker")).rebirths}`;
     drawCC();
+    drawLevel();
 }
 clickerShopButton.addEventListener("click", () => {
     shopSection.style.cssText = "display: block;";
@@ -60,5 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 document.getElementById("coinclick_upgrade").addEventListener("click", () => {
     coinClickUpgrade();
+});
+document.querySelector(".level_item").addEventListener("click", () => {
+    levelUp();
 });
 //# sourceMappingURL=index.js.map

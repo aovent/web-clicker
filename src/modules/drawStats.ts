@@ -13,3 +13,7 @@ export function drawCC(): void {
 export function drawCCspeed(): void {
     document.querySelector(".cb_speed").innerHTML = `Speed: ${JSON.parse(localStorage.getItem("AoventWebClickerUpgrades")).coinclick * 10}`;
 }
+
+export function drawLevel(): void {
+    document.querySelector(".stats_level").innerHTML = `Level: ${JSON.parse(localStorage.getItem("AoventWebClicker")).level}`;
+}
