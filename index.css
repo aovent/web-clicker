@@ -257,3 +257,11 @@ main h1 {
 
     transition: 0.2s;
 }
+
+
+
+
+
+::-webkit-scrollbar {
+    display: none;
+}

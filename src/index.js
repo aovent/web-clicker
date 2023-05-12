@@ -23,7 +23,7 @@ if (localStorage.getItem("AoventWebClicker") == null) {
         rebirths: 0
     };
     let upgrades = {
-        coinclick: 0
+        coinclick: 1
     };
     localStorage.setItem("AoventWebClicker", JSON.stringify(stats));
     localStorage.setItem("AoventWebClickerUpgrades", JSON.stringify(upgrades));

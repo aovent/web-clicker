@@ -40,7 +40,7 @@ if (localStorage.getItem("AoventWebClicker") == null) {
     let upgrades: {
         coinclick: number;
     } = {
-        coinclick: 0
+        coinclick: 1
     }
 
     localStorage.setItem("AoventWebClicker", JSON.stringify(stats));
