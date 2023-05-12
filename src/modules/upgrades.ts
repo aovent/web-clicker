@@ -104,6 +104,7 @@ export function levelUp(): void {
                 localStorage.setItem("AoventWebClicker", JSON.stringify(stats));
 
                 drawLevelprice();
+                drawMoney(document.querySelector(".cb_text"));
                 drawMoney();
                 drawLevel();
 

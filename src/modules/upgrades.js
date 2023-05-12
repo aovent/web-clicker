@@ -68,6 +68,7 @@ export function levelUp() {
                 };
                 localStorage.setItem("AoventWebClicker", JSON.stringify(stats));
                 drawLevelprice();
+                drawMoney(document.querySelector(".cb_text"));
                 drawMoney();
                 drawLevel();
                 levelUpField.innerHTML = "Level <i class='fa-solid fa-user-astronaut'></i>";

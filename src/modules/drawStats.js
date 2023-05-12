@@ -10,7 +10,7 @@ export function drawCC() {
     document.querySelector(".stats_coinclickstat").innerHTML = `Coin Click: ${JSON.parse(localStorage.getItem("AoventWebClickerUpgrades")).coinclick}`;
 }
 export function drawCCspeed() {
-    document.querySelector(".cb_speed").innerHTML = `Speed: ${JSON.parse(localStorage.getItem("AoventWebClickerUpgrades")).coinclick * 10}`;
+    document.querySelector(".cb_speed").innerHTML = `Speed: ${1 * JSON.parse(localStorage.getItem("AoventWebClicker")).level * (JSON.parse(localStorage.getItem("AoventWebClickerUpgrades")).coinclick * 10)}`;
 }
 export function drawLevel() {
     document.querySelector(".stats_level").innerHTML = `Level: ${JSON.parse(localStorage.getItem("AoventWebClicker")).level}`;
