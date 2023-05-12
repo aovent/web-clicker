@@ -2,6 +2,7 @@ import { coinGame } from "./modules/coinGame.js";
 import { getNowBalance } from "./modules/getNowBalance.js";
 import { drawMoney, drawCC, drawCCspeed, drawLevel } from "./modules/drawStats.js";
 import { coinClickUpgrade, levelUp } from "./modules/upgrades.js";
+import { bombGame } from "./modules/bombGame.js";
 
 const gemsField: HTMLElement = document.querySelector(".stats_ultramoney");
 const balanceField: HTMLElement = document.querySelector(".stats_money");
@@ -19,6 +20,8 @@ const gameSection: HTMLElement = document.querySelector(".section_clicker_game")
 
 const coinGameSection: HTMLElement = document.querySelector(".coin_game");
 const coinGameButton: HTMLElement = document.querySelector(".coin_cell");
+
+const bombGameSection: HTMLElement = document.querySelector(".bombs_game");
 
 const closecoinGameButton: HTMLElement = document.querySelector(".close_button_coin");
 
@@ -76,6 +79,14 @@ coinGameButton.addEventListener("click", () => {
 })
 closecoinGameButton.addEventListener("click", () => {
     coinGameSection.style.cssText = "display: none;"
+})
+
+document.querySelector(".cell_bomb").addEventListener('click', () => {
+    bombGameSection.style.cssText = "display: block;"
+    bombGame();
+})
+document.querySelector(".close_button_bomb").addEventListener("click", () => {
+    bombGameSection.style.cssText = "display: none;"
 })
 
 document.addEventListener("DOMContentLoaded", () => {

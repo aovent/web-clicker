@@ -28,6 +28,7 @@ export function coinClickUpgrade() {
                 localStorage.setItem("AoventWebClicker", JSON.stringify(stats));
                 localStorage.setItem("AoventWebClickerUpgrades", JSON.stringify(upgrades));
                 drawCCprice();
+                drawMoney(document.querySelector(".cb_text"));
                 drawMoney();
                 drawCC();
                 coinClickField.innerHTML = "Coin Click <i class='fa-brands fa-bitcoin'></i>";

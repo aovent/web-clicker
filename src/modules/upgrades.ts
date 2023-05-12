@@ -47,6 +47,7 @@ export function coinClickUpgrade(): void {
                 localStorage.setItem("AoventWebClickerUpgrades", JSON.stringify(upgrades));
 
                 drawCCprice();
+                drawMoney(document.querySelector(".cb_text"));
                 drawMoney();
                 drawCC();
 

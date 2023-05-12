@@ -153,8 +153,18 @@ main h1 {
     cursor: pointer;
 }
 
-.cell img {
+.cell img, .cell_img {
     width: 20vh;
+}
+
+.cell_bomb img {
+    width: 15vh;
+}
+
+.cell_bomb p {
+    color: var(--text-first);
+
+    text-shadow: 1px 1px 5px black;
 }
 
 .cell_text {
@@ -165,7 +175,7 @@ main h1 {
     text-transform: uppercase;
 }
 
-.coin_game {
+.coin_game, .bombs_game {
     position: absolute;
 
     background: var(--menus);
@@ -258,7 +268,24 @@ main h1 {
     transition: 0.2s;
 }
 
+.close_button_bomb {
+    display: flex;
+    justify-content: center;
+}
 
+.close_button_bomb button {
+    background: var(--submenus);
+    padding: 0.3vh;
+    border: 0;
+    color: var(--text-first);
+
+    padding: 0.3vh;
+}
+
+.close_button_bomb button:hover {
+    color: var(--hover-color1);
+    transition: 0.3s;
+}
 
 
 

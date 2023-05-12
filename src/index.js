@@ -1,6 +1,7 @@
 import { coinGame } from "./modules/coinGame.js";
 import { drawMoney, drawCC, drawCCspeed, drawLevel } from "./modules/drawStats.js";
 import { coinClickUpgrade, levelUp } from "./modules/upgrades.js";
+import { bombGame } from "./modules/bombGame.js";
 const gemsField = document.querySelector(".stats_ultramoney");
 const balanceField = document.querySelector(".stats_money");
 const levelField = document.querySelector(".stats_level");
@@ -13,6 +14,7 @@ const shopSection = document.querySelector(".section_clicker_shop");
 const gameSection = document.querySelector(".section_clicker_game");
 const coinGameSection = document.querySelector(".coin_game");
 const coinGameButton = document.querySelector(".coin_cell");
+const bombGameSection = document.querySelector(".bombs_game");
 const closecoinGameButton = document.querySelector(".close_button_coin");
 if (localStorage.getItem("AoventWebClicker") == null) {
     balanceField.innerHTML = "Money: 1000";
@@ -55,6 +57,13 @@ coinGameButton.addEventListener("click", () => {
 });
 closecoinGameButton.addEventListener("click", () => {
     coinGameSection.style.cssText = "display: none;";
+});
+document.querySelector(".cell_bomb").addEventListener('click', () => {
+    bombGameSection.style.cssText = "display: block;";
+    bombGame();
+});
+document.querySelector(".close_button_bomb").addEventListener("click", () => {
+    bombGameSection.style.cssText = "display: none;";
 });
 document.addEventListener("DOMContentLoaded", () => {
     drawMoney(document.querySelector(".cb_text"));
